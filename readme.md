@@ -1,7 +1,5 @@
-# Git Course
+## Development environment configuration
 
-# echo "Este é um repositório teste para ensinar o Git"
+### Objectives
 
-# 3rd modification 
-
-# A 4th modification, just for kicks
+Store git and shell configuration files and scripts
