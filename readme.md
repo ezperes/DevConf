@@ -1,4 +1,4 @@
-## Development environment configuration
+## Development environment configuration directory
 
 ### Objectives
 
