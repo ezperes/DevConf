@@ -27,6 +27,7 @@ else
     if [ "$answer" != "${answer#[Yy]}" ] ;then
     	echo
 	echo User says YES!	
+	echo
 	cd ~/DevConf	
 	git checkout master
 
@@ -50,7 +51,7 @@ else
 
 	echo
 	echo Pushing into remote repository...
-	# git push origin master
+	git push origin master
 
     else
 	# User says NO...
