@@ -1,0 +1,9 @@
+[user]
+	name = ZUCARATO
+	email = zucarato@gmail.com
+[core]
+	editor = sub
+[alias]
+	map = log --all --graph --oneline --decorate --abbrev-commit
+	co = checkout
+	st = status

@@ -41,6 +41,10 @@ else
 	    done
 	
 	echo
+	echo Adding new files
+	git add ${files[@]}
+
+	echo
 	echo Commiting updates
 	git commit -am "Update by $0 script"
 
