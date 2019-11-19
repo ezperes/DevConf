@@ -1,9 +1,16 @@
 #!/bin/bash
+# SCRIPT: pushdevconf
+# PURPOSE: PUSH CURRENT CONFIGURATION FILES TO REMOTE REPOSITORY IN GITHUB
+# AUTHOR: EDUARDO ZUCARATO
+# DATE: 2019/NOV/17
 echo
 echo "We are going to push current configuration files to DevConf remote repo"
 
-# files=(.gitconfig .bash_profile .bash_aliases)
-files=(a b c)
+# These are the config files to push to remote repo 
+files=( .gitconfig
+	.bash_profile 
+	.bash_aliases
+	.vimrc )
 
 # Exhibits file list
 echo
@@ -21,6 +28,7 @@ else
     	echo
 	echo User says YES!	
 	cd ~/DevConf	
+	git checkout master
 
 	echo
 	echo Deleting previous existing files in DevConf directory
@@ -32,13 +40,17 @@ else
 	    cp -vf $HOME/$file $HOME/DevConf;
 	    done
 	
-	
+	echo
+	echo Commiting updates
+	git commit -am "Update by $0 script"
+
+	echo
+	echo Pushing into remote repository...
+	# git push origin master
 
     else
 	# User says NO...
 	echo
     	echo No
-    fi
-    echo
-    # echo "Your answer is: $answer"
+    fi 
 fi
